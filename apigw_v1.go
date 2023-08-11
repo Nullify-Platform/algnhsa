@@ -29,6 +29,13 @@ func newAPIGatewayV1Request(ctx context.Context, payload []byte, opts *Options) 
 		return lambdaRequest{}, errAPIGatewayV1UnexpectedRequest
 	}
 
+	for k, v := range event.RequestContext.Authorizer {
+		switch v := v.(type) {
+		case string:
+			event.Headers[k] = v
+		}
+	}
+
 	req := lambdaRequest{
 		HTTPMethod:                      event.HTTPMethod,
 		Path:                            event.Path,
