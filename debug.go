@@ -2,10 +2,11 @@ package algnhsa
 
 import (
 	"encoding/json"
-	"github.com/aws/aws-lambda-go/events"
 	"io"
 	"mime"
 	"net/http"
+
+	"github.com/aws/aws-lambda-go/events"
 )
 
 const maxDumpFormParseMem = 32 << 20 // 32MB

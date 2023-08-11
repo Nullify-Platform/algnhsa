@@ -1,4 +1,4 @@
-module github.com/akrylysov/algnhsa
+module github.com/nullify-platform/algnhsa
 
 go 1.18
 

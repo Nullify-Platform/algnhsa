@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/akrylysov/algnhsa"
+	"github.com/nullify-platform/algnhsa"
 )
 
 func addHandler(w http.ResponseWriter, r *http.Request) {
