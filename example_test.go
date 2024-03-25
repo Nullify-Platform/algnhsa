@@ -1,6 +1,7 @@
 package algnhsa_test
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -25,5 +26,5 @@ func contextHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/add", addHandler)
 	http.HandleFunc("/context", contextHandler)
-	algnhsa.ListenAndServe(http.DefaultServeMux, nil)
+	algnhsa.ListenAndServe(context.Background(), http.DefaultServeMux, nil)
 }
