@@ -18,4 +18,4 @@ jobs:
       - name: Check if unused packages
         run: |
           go mod tidy
-          git diff --exit-code go.mod go.sum
+          git diff --exit-code
